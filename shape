@@ -1,0 +1,25 @@
+abstract class Shape {
+    public abstract int getArea();
+}
+
+class Rectangle extends Shape {
+    private int width, height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    
+    public int getArea() {
+        return width * height;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape rect = new Rectangle(5, 7);
+        System.out.println("Area: " + rect.getArea());
+    }
+}
+
